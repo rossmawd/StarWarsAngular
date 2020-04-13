@@ -1,6 +1,3 @@
 <div class="list-group">
-  <div *ngFor="let char of characters">
-  <app-item [character] = "char"></app-item>
-</div>
-
+  <app-item *ngFor="let char of characters" [character] = "char"></app-item>
 </div>
