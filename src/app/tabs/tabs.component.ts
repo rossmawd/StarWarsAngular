@@ -7,21 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
   characters = [
-    {name: 'Luke Skywalker', side: ''},
-    {name: 'Darth Vader', side: ''}
+    {name: 'Luke Skywalker', side: 'Light'},
+    {name: 'Darth Vader', side: 'Dark'}
   ]
-  chosenList = 'all' //stores which side the user has clicked
+  chosenList = 'All' //stores which side the user has clicked
   constructor() { }
 
   ngOnInit() {
   }
 
-  onChoose(side) {
-    this.chosenList = side
-  }
-
   getCharacters = () : any[] => {
-    if (this.chosenList === 'all') {
+    if (this.chosenList === 'All') {
       return this.characters.slice() //returns a copy of an array
     }
     console.log('getting chars')
@@ -29,5 +25,11 @@ export class TabsComponent implements OnInit {
       return char.side === this.chosenList
     })
 }
+
+  onChoose(side) {
+    this.chosenList = side
+  }
+
+
 
 }
