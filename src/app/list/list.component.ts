@@ -10,6 +10,10 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
+  // onSideAssigned(charInfo){
+  //   this.sideAssigned.emit(charInfo) //simply passing it on!
+  // }
+
   ngOnInit() {
   }
 
