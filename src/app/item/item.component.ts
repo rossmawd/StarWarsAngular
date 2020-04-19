@@ -8,8 +8,8 @@ import { StarWarsService } from '../star-wars.service';
 })
 export class ItemComponent implements OnInit {
   @Input() character;
-  swService: StarWarsService
-  constructor() { }
+  constructor(private swService: StarWarsService
+    ) { }
 
   onAssign(side) {
     // this.character.side = side

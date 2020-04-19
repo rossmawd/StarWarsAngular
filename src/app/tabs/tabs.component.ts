@@ -9,8 +9,8 @@ import { StarWarsService } from '../star-wars.service';
 export class TabsComponent implements OnInit {
  characters = []
   chosenList = 'All' //stores which side the user has clicked
-  swService: StarWarsService
-  constructor() { }
+
+  constructor(private swService: StarWarsService) { }
 
   ngOnInit() {
   }
